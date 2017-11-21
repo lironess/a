@@ -1,11 +1,11 @@
-import { user } from 'routes/user';
-import { login, register as registerRoute } from 'routes/auth';
+import { getFoods, addComment } from 'routes/food';
+import { addOrder } from 'routes/order';
 
 const register = (plugin, options, next) => {
   plugin.route([
-    { method: 'GET', path: '/user', config: user },
-    { method: 'POST', path: '/register', config: registerRoute },
-    { method: 'POST', path: '/login', config: login }
+    { method: 'GET', path: '/foods', config: getFoods },
+    { method: 'POST', path: '/foods/{id}/comment', config: addComment },
+    { method: 'POST', path: '/order', config: addOrder },
   ]);
   next();
 };

@@ -1,12 +1,10 @@
 import Hapi from 'hapi';
 import Good from 'good';
-import JWTAuth from 'hapi-auth-jwt2';
 import Inert from 'inert';
 import Vision from 'vision';
 
 import parameters from 'config/parameters';
 import Routes from 'routes';
-import Auth from 'config/auth';
 import Database from 'config/db';
 import Documentation from 'config/documentation';
 
@@ -33,8 +31,6 @@ const plugins = [
   Inert,
   Vision, // for hapi-sequelizejs
   Documentation,
-  JWTAuth,
-  Auth,
   Routes,
   Database,
   {

@@ -9,7 +9,7 @@ const documentationPlugin = {
   register: HapiSwagger,
   options: {
     info: {
-      title: 'hapi-api-boilerplate Server Documentation',
+      title: 'appfront server Documentation',
       version
     },
     schemes: [PROTOCOL],
