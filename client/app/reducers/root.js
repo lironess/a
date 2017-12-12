@@ -1,5 +1,7 @@
-const initialState = {
-  count: 1
-};
+import { combineReducers } from 'redux';
 
-export const root = (s = initialState) => s;
+import { foods } from 'reducers/foods';
+
+export const root = combineReducers({
+  foods
+});

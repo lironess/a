@@ -5,11 +5,15 @@
     ["stage-3"]
   ],
   "plugins": [
-    "transform-class-properties"
+    "transform-class-properties",
+    "transform-decorators-legacy",
+    "babel-plugin-transform-decorators"
   ],
   "env": {
     "test": {
-      "plugins": ["transform-es2015-modules-commonjs"]
+      "plugins": [
+        "transform-es2015-modules-commonjs"
+      ]
     }
   }
 }

@@ -1,25 +1,14 @@
 import React from 'react';
-import { Provider, connect } from 'react-redux';
-import PropTypes from 'prop-types';
+import { Provider } from 'react-redux';
 
 import store from 'store/index';
-
-const Counter = ({ count }) => <div>{ count }</div>;
-const ConnectedCounter = connect(({ count }) => ({ count }))(Counter);
+import Menu from 'components/menu';
 
 export const App = () => (
   <Provider store={ store }>
     <div>
-      Hello world
-      <ConnectedCounter />
+      Hello! this is our menu:
+      <Menu />
     </div>
   </Provider>
 );
-
-Counter.propTypes = {
-  count: PropTypes.number
-};
-
-Counter.defaultProps = {
-  count: 0
-};
